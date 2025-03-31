@@ -2,75 +2,103 @@
 <html>
 <head>
     <title>Contoh Halaman HTML Table</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
     <!-- Section 1: Menu -->
-    <table border="1" width="100%">
+    <table class="menu-table" width="100%">
         <tr>
-            <td align="center"><a href="#beranda">Header</a></td>
-            <!-- <td align="center"><a href="#tentang">Tentang</a></td> -->
-            <td align="center"><a href="#biodata">Biodata</a></td>
-            <td align="center"><a href="#portofolio">Portofolio</a></td>
-            <!-- <td align="center"><a href="#kontak">Kontak</a></td> -->
-        </tr>
-    </table>
-
-    <br>
-
-    <!-- Section 2: Judul di kiri dan gambar di kanan -->
-    <table border="1" width="100%">
-        <tr>
-            <td width="50%" id="beranda">
-                <h2>Selamat Datang di Website Saya</h2>
-                <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
-                <button>Pelajari lebih lanjut</button>
+            <td align="left" width="33%">
+                <a href="#beranda">Header</a>
             </td>
-            <td width="50%" align="center">
-                <img src="https://placehold.co/600x400" alt="Gambar Contoh">
-
+            <td width="34%"></td> <!-- Kosong untuk spacer -->
+            <td align="right" width="33%">
+                <a href="#biodata">Biodata</a>
+                <a href="#portofolio">Portofolio</a>
             </td>
         </tr>
     </table>
-  <table width="100%" id="tentang_saya">
-    <tr>
-        <td colspan="2" align="center">
-            <h2>About me</h2>
-            <p>a brief introduction about myself</p>
-        </td>
-    </tr>
-  </table>
-    
-
-    
 
     <br>
 
-    <!-- Section 3: Biodata dengan 6 box -->
-    <table border="1" width="100%" id="biodata">
-        <tr>
-            <td align="center">Full Name</td>
-            <td align="center">Education</td>
-            <td align="center">Pekerjaan</td>
-        </tr>
-        <tr>
-            <!-- <td align="center">Fulan</td>
-            <td align="center">25 Tahun</td>
-            <td align="center">Jakarta</td> -->
-        </tr>
-        <tr>
-            <td align="center">Contact</td>
-            <td align="center">Hobi</td>
-            <td align="center">Alamat</td>
-        </tr>
-        <tr>
-            <!-- <td align="center">S1 Informatika</td>
-            <td align="center">Menulis</td>
-            <td align="center">fulan@email.com</td> -->
-        </tr>
-    </table>
-    <br>
+<!-- Section 2: Judul di kiri dan gambar di kanan -->
+    <!-- Hero Section -->
     <div>
+        <table class="hero-section" width="100%">
+            <tr>
+                <td width="50%" class="hero-text">
+                    <h2>Selamat Datang di Website Saya</h2>
+                    <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+                    <a href="#biodata" class="cta-button">Pelajari lebih lanjut</a>
+                </td>
+                <td width="50%" align="center" class="hero-image">
+                    <img src="src/fotoprofil.png" alt="Gambar Contoh">
+                </td>
+            </tr>
+        </table>
+    </div>
+<!-- end Section 2 -->
+<!--star aboutme -->
+    <div>
+        <table width="100%" class="about-section" id="tentang_saya">
+            <tr>
+                <td colspan="2" align="center" class="about-header">
+                    <h2>About Me</h2>
+                    <p>A brief introduction about myself</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" class="about-text">
+                    <h3>Hi, I'm Fauzi 👋</h3>
+                    <p>Saya adalah seorang pendidik dan pembelajar yang mencintai dunia IT, pendidikan, dan dakwah. Di setiap baris kode dan setiap bait ilmu, saya percaya ada ladang amal yang terus tumbuh.</p>
+                    <p>Let's build, inspire, and grow together!</p>
+                </td>
+                <td width="50%" class="about-photo" align="center">
+                    <img src="src/baca buku.png" alt="Foto Saya" class="profile-pic">
+                </td>
+            </tr>
+        </table>
+    </div>
+<!-- End aboutme -->
+    
+
+<!-- Section 3: Biodata dengan 6 box -->    
+    <div>
+        <table class="biodata-section" width="100%" id="biodata">
+            <tr>
+                <td class="biodata-card">
+                    <h3>Full Name</h3>
+                    <p>Fauzi M. Noor</p>
+                </td>
+                <td class="biodata-card">
+                    <h3>Umur</h3>
+                    <p>34 Tahun</p>
+                </td>
+                <td class="biodata-card">
+                    <h3>Domisili</h3>
+                    <p>Purworejo, Jawa Tengah</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="biodata-card">
+                    <h3>Pendidikan</h3>
+                    <p>S.Sy - Studi Islam</p>
+                </td>
+                <td class="biodata-card">
+                    <h3>Hobi</h3>
+                    <p>Desain, Coding, Menulis</p>
+                </td>
+                <td class="biodata-card">
+                    <h3>Email</h3>
+                    <p>pakfauzi@email.com</p>
+                </td>
+            </tr>
+        </table>        
+    </div>
+<!-- end Section 3: Biodata dengan 6 box -->
+<!-- Portofolio Star -->
+    <div class="portofolio-section">
         <table width="100%" id="tentang_saya">
             <tr>
                 <td colspan="2" align="center">
@@ -78,9 +106,10 @@
                 </td>
             </tr>
         </table>
-    </div>    
+    </div>
+<!-- Portofolio end -->
 
-    <!-- Section 4: Portofolio -->
+<!-- Section 4: Portofolio -->
     <table border="1" width="100%" id="portofolio">
         <tr>
             <td width="50%" align="center">
